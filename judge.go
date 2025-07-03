@@ -87,16 +87,16 @@ type SubmitCtx struct {
 	Status string
 	Msg    string
 
-	SubmitDir       string `json:"-"`
+	SubmitDir       string
 	SubmitsHashes   SubmitsHashes
-	Workdir         string `json:"-"`
+	Workdir         string
 	WorkflowResults WorkflowResults
 	JudgeResult     JudgeResult
 
-	RealWorkdir string `json:"-"`
+	RealWorkdir string
 
 	running  chan struct{}
-	Userface Userface `json:"-"`
+	Userface Userface
 }
 
 func (ctx *SubmitCtx) Update() {
